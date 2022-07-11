@@ -2,6 +2,7 @@ let card = document.querySelector('.card');
 let cardThanks = document.querySelector('.card-2');
 let listNumbers = document.querySelectorAll('.list li');
 let description = document.querySelector('.description-2');
+let button = document.querySelector('button');
 
 let feed = 0;
 
@@ -15,8 +16,9 @@ function selectNumbers(number) {
 }
 
 
-function submit() {
+button.addEventListener("click",()=>{
     description.innerText = `You selected ${feed} of 5`;
     card.style.display = 'none';
     cardThanks.style.display = 'block';
-}
+})
+
